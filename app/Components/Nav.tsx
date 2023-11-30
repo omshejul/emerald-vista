@@ -41,7 +41,7 @@ function Nav() {
 
         {/* Mobile Nav */}
         <div
-          className={`lg:hidden top-32 grid w-11/12 border-2 border-r-0 border-accent border-opacity-50 right-0 origin-top-right absolute rounded-s-2xl text-white text-4xl font-semibold bg-bg bg-opacity-80 backdrop-blur-sm transition-all duration-500 ${menuState ? "" : "scale-x-95 opacity-0"
+          className={`lg:hidden  top-32 grid w-11/12 border-2 border-r-0 border-accent border-opacity-50 right-0 origin-top-right absolute rounded-s-2xl text-white text-4xl font-semibold bg-bg bg-opacity-80 backdrop-blur-sm transition-all duration-500 ${menuState ? "" : "pointer-events-none scale-x-95 opacity-0"
             } `}
         >
           <Link href="/" className="p-4 my-4 text-center">
