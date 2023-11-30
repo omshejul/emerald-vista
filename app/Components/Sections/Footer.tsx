@@ -35,7 +35,7 @@ const Footer = () => {
       </div>
     </div>
     <div className="copyrightcontainer flex flex-col lg:flex-row items-center m-4">
-      <div className="copyright m-1">© 2023 Emerald Vista  |  All rights reserved</div>
+      <div className="copyright m-1">©  2023 Emerald Vista  |  All rights reserved</div>
       <div className="creators m-1">Designed by <Link className="underline" href="tel:+919623069768">Tanvi Vaze</Link> | Created by <Link className="underline" href="https://omshejul.com/qr/">Om Shejul</Link> </div>
      </div>
     </>

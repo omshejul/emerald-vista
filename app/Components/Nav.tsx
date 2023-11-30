@@ -9,7 +9,7 @@ function Nav() {
     setMenuState(!menuState);
   };
   return (
-    <nav className="absolute grid place-items-center grid-flow-col items-center w-full p-5 h-min md:text-lg">
+    <nav className="absolute top-0 grid place-items-center grid-flow-col items-center w-full p-5 md:text-lg">
       <Logo size={6} />
       <button onClick={toggleMenu} className="lg:hidden p-8">
         {menuState ? <HiOutlineX size={32} /> : <HiMenuAlt4 size={32} />}

@@ -11,8 +11,8 @@ import ContactBtn from "./Components/ContactBtn/ContactBtn";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
-      <Nav />
       <ContactBtn />
+      <Nav />
       <Hero />
       <Services />
       <Amenities />
