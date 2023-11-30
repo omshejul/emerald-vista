@@ -5,9 +5,11 @@ import Link from "next/link";
 
 
 const Footer = () => {
+
+  const yr =new Date().getFullYear()
   return (
     <>
-    <div className="flex justify-center text-black bg-white w-full">
+    <footer className="flex justify-center text-black bg-white w-full mt-12">
       <div className="grid md:grid-cols-2 container place-self-center">
         <div className="flex items-center p-4">
           <Logo size={16} />
@@ -33,9 +35,9 @@ const Footer = () => {
           <Map/>
         </div>
       </div>
-    </div>
-    <div className="copyrightcontainer flex flex-col lg:flex-row items-center m-4">
-      <div className="copyright m-1">©  2023 Emerald Vista  |  All rights reserved</div>
+    </footer>
+    <div className="copyrightcontainer flex flex-col lg:flex-row items-center justify-center m-4">
+      <div className="copyright m-1">©  {yr} Emerald Vista  |  All rights reserved</div>
       <div className="creators m-1">Designed by <Link className="underline" href="tel:+919623069768">Tanvi Vaze</Link> | Created by <Link className="underline" href="https://omshejul.com/qr/">Om Shejul</Link> </div>
      </div>
     </>
@@ -43,3 +45,7 @@ const Footer = () => {
 };
 
 export default Footer;
+function useState(arg0: boolean): [any, any] {
+  throw new Error("Function not implemented.");
+}
+

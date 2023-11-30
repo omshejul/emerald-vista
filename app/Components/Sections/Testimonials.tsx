@@ -4,7 +4,7 @@ import Card from "../Card/Card";
 
 const Testimonials = () => {
   return (
-    <div className="m-8 mb-16">
+    <div className="m-8 mb-8">
       <Heading>Testimonials</Heading>
       <div className="flex flex-col md:flex-row max-w-7xl">
         <div className="card max-w-2xl p-4 md:p-6 lg:p-10 rounded-2xl m-2 bg-[#2B0738] min-w-min">

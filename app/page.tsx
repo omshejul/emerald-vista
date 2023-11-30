@@ -10,16 +10,16 @@ import ContactBtn from "./Components/ContactBtn/ContactBtn";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center">
-      <ContactBtn />
-      <Nav />
-      <Hero />
-      <Services />
-      <Amenities />
-      <Banner />
-      <Accommodation/>
-      <Testimonials/>
-      <Footer/>
+    <main className="flex min-h-screen flex-col items-center ">
+        <ContactBtn />
+        <Nav />
+        <Hero />
+        <Services />
+        <Amenities />
+        <Banner />
+        <Accommodation />
+        <Testimonials />
+        <Footer />
     </main>
   );
 }
