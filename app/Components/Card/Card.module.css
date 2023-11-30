@@ -1,0 +1,13 @@
+.CardContainer {
+  width: 16rem;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  overflow: hidden;
+  transition: 0.25s ease-in;
+  background-color: #2B0738;
+}
+.CardContainer:hover {
+  box-shadow: 0 5px 1.5rem hsla(0, 0%, 0%, 0.5);
+  scale: 1.025;
+  transition: 0.25s;
+}
