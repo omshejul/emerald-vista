@@ -11,9 +11,9 @@ function Nav() {
   return (
     <div className="navContainer w-full grid place-items-center">
 
-      <nav className="absolute top-0 grid place-self-center grid-flow-col items-center w-full p-5 md:text-lg">
+      <nav className="absolute top-0 grid place-self-center grid-flow-col justify-between items-center w-full p-5 md:text-lg">
         <Logo size={6} />
-        <button onClick={toggleMenu} className="lg:hidden p-8">
+        <button onClick={toggleMenu} className="lg:hidden p-8 w-fit">
           {menuState ? <HiOutlineX size={32} /> : <HiMenuAlt4 size={32} />}
         </button>
 
