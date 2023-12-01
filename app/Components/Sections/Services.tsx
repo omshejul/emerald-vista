@@ -1,23 +1,22 @@
 import Heading from "../Heading/Heading";
 import Card from "../Card/Card";
+
+// Images
+import img1 from 'public/services/1.png'
+import img2 from 'public/services/2.png'
+import img3 from 'public/services/3.png'
+import img4 from 'public/services/4.png'
+
 function Services() {
   return (
     <>
       <div className="services flex flex-col content-center justify-center ">
-        <Heading class='text-center'>Emerald Vista</Heading>
-        <div className=" flex flex-wrap justify-around ">
-          <Card img="/services/image1.png">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio hic non aperiam? Error repellendus culpa deserunt, impedit praesentium 
-          </Card>
-          <Card img="/services/image1.png">
-          temporibus necessitatibus corrupti optio, voluptatem sequi ullam nemo? Quod harum incidunt unde laborum minima dolorum illo veritatis
-          </Card>
-          <Card img="/services/image1.png">
-          cupiditate accusamus nesciunt mollitia dicta explicabo, nulla sapiente soluta excepturi deserunt vitae non officia ipsam 
-          </Card>
-          <Card img="/services/image1.png">
-          voluptatum quidem ullam ab labore. Assumenda hic nihil aperiam, vero sunt sapiente pariatur ipsum excepturi dolores explicabo
-          </Card>
+        <Heading class='text-center'>Our Services</Heading>
+        <div className=" flex flex-wrap justify-center ">
+          <img src="/services/1.png" className=" hover:scale-105 transition-all -mx-10" width='350px' alt="" />
+          <img src="/services/2.png" className=" hover:scale-105 transition-all -mx-10" width='350px' alt="" />
+          <img src="/services/3.png" className=" hover:scale-105 transition-all -mx-10" width='350px' alt="" />
+          <img src="/services/4.png" className=" hover:scale-105 transition-all -mx-10" width='350px' alt="" />
         </div>
       </div>
     </>

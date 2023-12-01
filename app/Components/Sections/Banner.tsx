@@ -12,6 +12,14 @@ const Banner = () => {
           <div className="p-1 head text-5xl font-bold">40K+</div>
           <div className="p-1 description">Stays Completed</div>
         </div>
+        <div className="md:p-2 lg:p-5 text-center md:mx-5 ">
+          <div className="p-1 head text-5xl font-bold"> 100+</div>
+          <div className="p-1 description">corporate companies</div>
+        </div>
+        <div className="md:p-2 lg:p-5 text-center md:mx-5 ">
+          <div className="p-1 head text-5xl font-bold">500+</div>
+          <div className="p-1 description">500+ events</div>
+        </div>
       </div>
     </div>
   );

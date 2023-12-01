@@ -1,10 +1,9 @@
 import React from "react";
 import styles from './Card.module.css'
 
-
 interface CardProps {
-  img: string;
-  children: string;
+  img: any;
+  children?: string;
   
 }
 

@@ -37,10 +37,10 @@ const Footer = () => {
       </div>
     </footer>
     <div className="copyrightcontainer flex flex-col lg:flex-row items-center justify-center m-4">
-      <div className="copyright m-1">©  {yr} Emerald Vista  |  All rights reserved</div>
-      <div className="creators m-1 flex flex-col lg:flex-row">
-        <div className="flex p-1">Designed by&nbsp; <Link className="underline" href="tel:+919623069768">Tanvi Vaze </Link></div><span className="hidden p-1 lg:inline">&nbsp;|&nbsp;</span>
-        <div className="flex p-1">Created by&nbsp; <Link className="underline" href="https://omshejul.com/qr/">Om Shejul</Link></div>
+      <div className="copyright m-1">© {yr} Emerald Vista  |  All rights reserved</div>
+      <div className="creators m-1 flex flex-col items-center lg:flex-row">
+        <div className="btn flex pb-1">Designed by&nbsp; <Link className="underline" href="tel:+919623069768">Tanvi Vaze </Link></div><span className="hidden p-1 lg:inline">&nbsp;|&nbsp;</span>
+        <div className="btn flex pb-1">Created by&nbsp; <Link className="underline" href="https://omshejul.com/qr/">Om Shejul</Link></div>
         </div>
      </div>
     </>

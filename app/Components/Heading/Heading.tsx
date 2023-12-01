@@ -3,6 +3,13 @@
 import React from "react";
 import styled from "styled-components";
 
+import { Adamina } from "next/font/google";
+
+const adamina = Adamina({
+  subsets: ["latin"],
+  weight: "400",
+});
+
 // Define the props type
 interface HeadingProps {
   class?: string;
@@ -11,9 +18,9 @@ interface HeadingProps {
 
 const Heading: React.FC<HeadingProps> = (props) => {
   return (
-    <>
+    <div className={adamina.className}>
       <Container className={props.class}>{props.children}</Container>
-    </>
+    </div>
   );
 };
 export default Heading;
