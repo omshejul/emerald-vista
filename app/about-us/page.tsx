@@ -29,10 +29,10 @@ export default function Home() {
         the dedicated team led by Mr. Jayant Sadavarte has consistently
         delivered exceptional service to its cherished guests, establishing a
         reputation for excellence in the hospitality industry. Adding a familial
-        touch to the operations, Mr. Sadavarte's daughter, Yashashree Sadavarte,
+        touch to the operations, Mr. Sadavarte&lsquo;s daughter, Yashashree Sadavarte,
         and son, Mr. Krishna Sadavarte, play pivotal roles in managing the
         day-to-day affairs of the facility. Their commitment to quality and
-        hospitality reflects the family's dedication to providing an
+        hospitality reflects the family&lsquo;s dedication to providing an
         unparalleled experience for the guests of Emerald Vista Luxury Suites
       </Para>
       <Heading>Our Services</Heading>

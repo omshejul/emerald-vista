@@ -5,7 +5,7 @@ interface SubheadingProps {
 }
 
 const escapeSingleQuotes = (text: string) => {
-  return text.replace(/'/g, "&apos;");
+  return text.replace(/'/g, "&lsquo;");
 };
 
 const Subheading: React.FC<SubheadingProps> = ({ children }) => {
