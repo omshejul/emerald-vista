@@ -1,5 +1,5 @@
 import React from 'react'
-import Heading from '../Heading/Heading'
+import Heading from '../Text/Heading'
 import Pill from '../Pill/Pill'
 
 const Accommodation = () => {

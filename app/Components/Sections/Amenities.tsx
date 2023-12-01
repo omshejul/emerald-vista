@@ -1,6 +1,6 @@
 import React from 'react'
 import Pill from '../Pill/Pill'
-import Heading from '../Heading/Heading'
+import Heading from '../Text/Heading'
 const Amenities = () => {
   const pillClass = 'flex p-4 lg:mx-10';
   const imgSize = 4

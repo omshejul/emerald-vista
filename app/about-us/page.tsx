@@ -1,7 +1,7 @@
 import ContactBtn from "../Components/ContactBtn/ContactBtn";
-import Heading from "../Components/Heading/Heading";
-import Para from "../Components/Heading/Para";
-import Subheading from "../Components/Heading/Subheading";
+import Heading from "../Components/Text/Heading";
+import Para from "../Components/Text/Para";
+import Subheading from "../Components/Text/Subheading";
 import Nav from "../Components/Nav";
 import Footer from "../Components/Sections/Footer";
 import Hero from "../Components/Sections/Hero";
@@ -9,6 +9,7 @@ import Image from "next/image";
 
 // Images
 import img1 from "public/about-us/1.png";
+import gallery1 from "public/about-us/photo-gallery/1.png";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
       <div className=" max-w-5xl p-4 w-full h-max lg:max-w-7xl lg:rounded-3xl lg:drop-shadow-2xl  flex justify-center overflow-hidden">
         <Image src={img1} alt="Hero" />
       </div>
-      <p className="p-4 max-w-5xl text-center">
+      <Para>
         Emerald Vista Luxury Suites is the brainchild of Mr. Jayant Sadavarte, a
         visionary entrepreneur and the driving force behind the esteemed
         construction firm, Jayant Sadavarte & Associates. In 2019, Mr. Sadavarte
@@ -33,7 +34,7 @@ export default function Home() {
         day-to-day affairs of the facility. Their commitment to quality and
         hospitality reflects the family's dedication to providing an
         unparalleled experience for the guests of Emerald Vista Luxury Suites
-      </p>
+      </Para>
       <Heading>Our Services</Heading>
       <Subheading>
         Welcome to Emerald Vista Luxury Suites, where indulgence meets comfort
@@ -61,7 +62,7 @@ export default function Home() {
         experience in our Premium Service Apartments.
       </Para>
       <Heading>Photo Gallery</Heading>
-      <img src="/about-us/photo-gallery/1.png" alt="" />
+      <Image src={gallery1} alt="" />
       <Footer />
     </main>
   );
