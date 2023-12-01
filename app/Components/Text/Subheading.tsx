@@ -1,19 +1,14 @@
-import React from 'react';
+import React from 'react'
 
-interface SubheadingProps {
-  children: React.ReactNode; // More specific type for children
+interface SubheadingProps{
+    children: string
 }
-
-const escapeSingleQuotes = (text: string) => {
-  return text.replace(/'/g, "&apos;");
-};
-
-const Subheading: React.FC<SubheadingProps> = ({ children }) => {
+const Subheading: React.FC<SubheadingProps> = (props) => {
   return (
-    <p className='p-4 max-w-5xl text-center'>
-      {typeof children === 'string' ? escapeSingleQuotes(children) : children}
-    </p>
-  );
+
+      <p className=' text-lg font-light max-w-2xl text-center leading-8 m-2'>{props.children}</p>
+
+  )
 }
 
-export default Subheading;
+export default Subheading
