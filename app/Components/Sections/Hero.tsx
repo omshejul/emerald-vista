@@ -17,7 +17,7 @@ const Hero = () => {
           src="/hero/hero-image.png"
           alt="Hero"
           fill
-          className="w-full h-full"
+          className="w-full h-full object-cover"
           priority // Keep priority for preloading important images
         />
       </div>
