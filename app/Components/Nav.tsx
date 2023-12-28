@@ -21,12 +21,15 @@ function Nav() {
 
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex navMenu w-full max-w-md justify-around md:mx-5 place-self-center">
+        <div className="hidden lg:flex navMenu w-full max-w-max justify-around md:mx-5 place-self-center">
           <Link href="/" className="ms-2 md:p-2 md:m-1">
             Home
           </Link>
           <Link href="/about-us" className="ms-2 md:p-2 md:m-1">
             About Us
+          </Link>
+          <Link href="/our-services" className="ms-2 md:p-2 md:m-1">
+            Our Services
           </Link>
           <Link href="/corporate" className="ms-2 md:p-2 md:m-1">
             Corporate
