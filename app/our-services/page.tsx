@@ -20,7 +20,7 @@ const tabVariants = {
     exit: { opacity: 0, x: 100 },
 };
 
-const page: React.FC = () => {
+const Page: React.FC = () => {
     const [isImageModalOpen, setIsImageModalOpen] = useState(false);
     const [currentImage, setCurrentImage] = useState('');
 
@@ -159,7 +159,7 @@ const page: React.FC = () => {
     );
 };
 
-export default page;
+export default Page;
 
 
 interface TabProps {
