@@ -53,6 +53,9 @@ function Nav() {
           <Link href="/about-us" className="p-4 my-4 text-center">
             About Us
           </Link>
+          <Link href="/our-services" className="p-4 my-4 text-center">
+          Our Services
+          </Link>
           <Link href="/corporate" className="p-4 my-4 text-center">
             Corporate
           </Link>
