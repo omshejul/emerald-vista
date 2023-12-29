@@ -1,6 +1,5 @@
-import React from 'react'
-import Heading from '../Text/Heading'
-import Pill from '../Pill/Pill'
+import Pill from '../Pill/Pill';
+import Heading from '../Text/Heading';
 
 const Accommodation = () => {
     const imgSize = 7
@@ -8,7 +7,7 @@ const Accommodation = () => {
     return (
         <div className='flex flex-col items-center justify-center'>
             <Heading>Perfect Spaces for Every Lifestyle</Heading>
-            <p className=' text-lg font-light max-w-2xl text-center leading-8 m-2'>Emerald Vista Luxury Suites proudly caters to a diverse spectrum of guests, ensuring a tailored and exceptional experience for all.</p>
+            <p className=' text-lg text-[#f8d0d0] font-light max-w-2xl text-center leading-8 m-2'>Emerald Vista Luxury Suites proudly caters to a diverse spectrum of guests, ensuring a tailored and exceptional experience for all.</p>
             <div className="flex flex-wrap justify-center p-3 ">
                 <Pill class={pillClass} img='/accommodation/1.png' imgSize={imgSize} >For corporate travellers, our conference facilities and central location provide convenience and efficiency. </Pill>
                 <Pill class={pillClass} img='/accommodation/2.png' imgSize={imgSize} >Families can enjoy the ample space and the convenience of our in-house restaurant, while solo female travellers find a secure and welcoming environment.</Pill>

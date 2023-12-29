@@ -2,6 +2,7 @@
 import Logo from "./Logo";
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from 'next/router';
 import { HiMenuAlt4, HiOutlineX } from "react-icons/hi";
 function Nav() {
   const [menuState, setMenuState] = useState(false);

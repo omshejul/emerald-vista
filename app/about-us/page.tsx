@@ -16,7 +16,7 @@ export default function Home() {
       <Nav />
       <ContactBtn />
       <Heading class="pt-28">Our Leadership</Heading>
-      <div className=" max-w-5xl p-4 w-full h-max lg:max-w-7xl lg:rounded-3xl lg:drop-shadow-2xl  flex justify-center overflow-hidden">
+      <div className=" max-w-5xl p-4 w-full h-max lg:max-w-5xl lg:rounded-3xl lg:drop-shadow-2xl  flex justify-center overflow-hidden">
         <Image src={img1} alt="Hero" />
       </div>
       <Para>

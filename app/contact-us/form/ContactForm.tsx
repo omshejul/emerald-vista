@@ -70,9 +70,9 @@ const ContactForm = () => {
                 variant="outlined"
                 required
             /></div>
-                        <div className="flex flex-wrap justify-center lg:justify-start">
+                        <div className="flex w-full flex-wrap justify-center lg:justify-start">
             <TextField
-                className='bg-fg m-2'
+                className='bg-fg w-full m-2'
                 label="Additional comments"
                 name="comments"
                 value={formData.comments}

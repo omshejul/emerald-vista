@@ -24,67 +24,73 @@ const ContactForm = () => {
 
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
-        // Handle the form submission logic here
         console.log(formData);
     };
 
     return (
         <Box component="form" className='flex flex-col  justify-center bg-[#F0F1F8] p-3 lg:p-10 text-black m-4' noValidate autoComplete="off" onSubmit={handleSubmit} >
             <Heading class='w-full'>Corporate Contact Us Form</Heading>
+            <div className="flex flex-wrap m-2 justify-center">
+                <div className="m-2">
+                    <TextField
+                        className='bg-fg'
+                        label="Full Name"
+                        name="fullName"
+                        value={formData.fullName}
+                        onChange={handleChange}
+                        variant="outlined"
+                        required
+                    />
+                </div>
+                <div className="m-2">
+
+                    <TextField
+                        className='bg-fg'
+                        label="Email Id"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        variant="outlined"
+                        required
+                    /></div>
+            </div>
             <div className="flex flex-wrap  justify-center">
-            
-            <TextField
-                className='bg-fg m-2'
-                label="Full Name"
-                name="fullName"
-                value={formData.fullName}
-                onChange={handleChange}
-                variant="outlined"
-                required
-            />
-            <TextField
-                className='bg-fg m-2'
-                label="Email Id"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                variant="outlined"
-                required
-            /></div>
-                        <div className="flex flex-wrap  justify-center">
-            <TextField
-                className='bg-fg m-2'
-                label="Phone No."
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                variant="outlined"
-                required
-            />
-            <TextField
-                className='bg-fg m-2'
-                label="Company"
-                name="company"
-                value={formData.company}
-                onChange={handleChange}
-                variant="outlined"
-                required
-            /></div>
-                        <div className="flex flex-wrap justify-center lg:justify-start">
-            <TextField
-                className='bg-fg m-2'
-                label="Additional comments"
-                name="comments"
-                value={formData.comments}
-                onChange={handleChange}
-                variant="outlined"
-                multiline
-                rows={4}
-            /></div>
-                        <div className="flex justify-center w-full pt-4">
-            <Button type="submit" className=' py-3 px-6 bg-bg' variant="contained">
-                Submit
-            </Button></div>
+                <div className="m-2">
+
+                    <TextField
+                        className='bg-fg'
+                        label="Phone No."
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        variant="outlined"
+                        required
+                    /> </div><div className="m-2">
+                    <TextField
+                        className='bg-fg'
+                        label="Company"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleChange}
+                        variant="outlined"
+                        required
+                    /></div> </div>
+            <div className="flex w-full flex-wrap justify-center lg:justify-start">
+                <div className="m-4 w-full">
+                    <TextField
+                        className=' w-full bg-fg'
+                        label="Additional comments"
+                        name="comments"
+                        value={formData.comments}
+                        onChange={handleChange}
+                        variant="outlined"
+                        multiline
+                        rows={4}
+                    /></div> </div>
+            <div className="flex justify-center w-full pt-4">
+                <Button type="submit" className=' py-3 px-6 bg-bg' variant="contained">
+                    Submit
+                </Button></div>
         </Box>
     );
 };

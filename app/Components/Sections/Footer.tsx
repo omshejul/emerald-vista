@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="px-2 py-4">
               <div className="heading font-semibold text-xl">Address</div>
               <div className="content">
-                52/5/3, Pune Banglore Highway Pashan Exit, behinf Audi showroom
+                52/5/3, Pune Banglore Highway Pashan Exit, behind Audi showroom
                 Mumbai, Pune, Maharashtra 411045
               </div>
             </div>

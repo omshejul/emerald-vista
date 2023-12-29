@@ -41,8 +41,8 @@ const Page: React.FC = () => {
         <main className="flex min-h-screen flex-col items-center">
             <Nav />
             <ContactBtn />
-            <div className="pt-32 m-8">
-            <video controls autoPlay muted loop >
+            <div className="-z-10 w-full overflow-clip h-screen">
+            <video className='w-full object-cover h-screen'  autoPlay muted loop >
             <source src="/our-services/video.webm" />
             </video>
             </div>
@@ -77,7 +77,7 @@ const Page: React.FC = () => {
                                 exit="exit"
                                 variants={tabVariants}
                             >
-                                <div className="container py-4 px-1 lg:px-4 flex flex-wrap">
+                                <div id='servicesDiv' className="container py-4 px-1 lg:px-4 flex flex-wrap">
                                     <div
                                         onClick={() => openImageModal(`/our-services/${tab.label}/main.png`)}
                                         className="mainImageDiv w-1/3 relative place-self-center col-span-1 cursor-pointer"
@@ -149,8 +149,8 @@ const Page: React.FC = () => {
             {isImageModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center" onClick={closeImageModal}>
                     <div className="relative" onClick={(e) => e.stopPropagation()}>
-                        <Image src={currentImage} className='max-h-screen' height={500} width={500} objectFit="contain" alt="Modal Image" />
-                        <button className="absolute top-0 right-0 m-4 bg-black bg-opacity-50 shadow-lg rounded-full p-2 aspect-square" onClick={closeImageModal}><HiOutlineX/></button>
+                        <Image src={currentImage} className='max-h-screen object-cover' height={1000} width={1000} alt="Modal Image" />
+                        <button className="absolute top-0 right-0 m-10 bg-black bg-opacity-50 shadow-lg rounded-full p-2 aspect-square" onClick={closeImageModal}><HiOutlineX/></button>
                     </div>
                 </div>
             )}
