@@ -10,6 +10,7 @@ import Image from "next/image";
 // Images
 import img1 from "public/about-us/group-photo.png";
 
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
