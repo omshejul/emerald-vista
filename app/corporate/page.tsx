@@ -3,6 +3,8 @@ import Nav from "../Components/Nav"
 import Footer from "../Components/Sections/Footer"
 import Heading from "../Components/Text/Heading"
 import Para from "../Components/Text/Para"
+import CompanyLogos from "./company-logos/CompanyLogos"
+import Form from "./form/Form"
 
 const page = () => {
     return (
@@ -26,6 +28,8 @@ const page = () => {
                 At Emerald Vista Luxury Suites, we extend a warm invitation to our esteemed corporate guests, recognizing the unique needs of long-term stays. Our facility is specially designed to provide a comfortable and productive environment for business travelers. As part of our commitment to fostering lasting relationships with corporate partners, we have established agreements with prominent companies such as Lupin India, Tata Consultancy Ltd., Calsoft, and more. To enhance the corporate experience, we offer exclusive special offers and discounts for our valued corporate guests. For detailed information on corporate discounts or to explore potential collaborations, we encourage interested parties to reach out to us directly. Contact us to discover how Emerald Vista Luxury Suites can elevate the stay for your corporate travelers with tailored packages and unparalleled hospitality.
             </Para>
             <Heading>Our Corporate Customers</Heading>
+            <CompanyLogos/>
+            <Form />
             <Footer />
         </main>
     )
