@@ -20,65 +20,24 @@ const companyLogos = [
 const Carousel = () => {
   return (
     <div className={styles.slider}>
-    <div className={styles.slidetrack}>
-      {companyLogos.map((logo, index) => (
-        <div className={styles.slide}>
-        <Image className=' object-contain' key={index} src={logo} alt={`Company Logo ${index + 1}`} width={450} height={200} />
-        </div>
-      ))}
-      {companyLogos.map((logo, index) => ( // Duplicate for continuous loop
-      <div className={styles.slide}>
-        <Image className=' object-contain' key={`duplicate-${index}`} src={logo} alt={`Company Logo ${index + 1}`} width={450} height={200} />
+      <div className={styles.slidetrack}>
+        {companyLogos.map((logo, index) => (
+          <div key={index} className={styles.slide}>
+            <Image src={logo} alt={`Company Logo ${index + 1}`} width={450} height={200} />
+          </div>
+        ))}
+        {companyLogos.map((logo, index) => (
+          <div key={`duplicate-${index}`} className={styles.slide}>
+            <Image src={logo} alt={`Company Logo ${index + 1}`} width={450} height={200} />
+          </div>
+        ))}
       </div>
-      ))}
-    </div>
     </div>
   );
 };
 
+
+
 export default Carousel;
 
   
-//   <div class="slider">
-//       <div class="slide-track">
-//           <div class="slide">
-//               <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
-//           </div>
-//           <div class="slide">
-//               <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
-//           </div>
-//           <div class="slide">
-//               <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
-//           </div>
-//           <div class="slide">
-//               <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
-//           </div>
-//           <div class="slide">
-//               <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
-//           </div>
-//           <div class="slide">
-//               <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
-//           </div>
-//           <div class="slide">
-//               <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
-//           </div>
-//           <div class="slide">
-//               <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
-//           </div>
-//           <div class="slide">
-//               <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
-//           </div>
-//           <div class="slide">
-//               <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
-//           </div>
-//           <div class="slide">
-//               <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
-//           </div>
-//           <div class="slide">
-//               <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
-//           </div>
-//           <div class="slide">
-//               <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
-//           </div>
-//       </div>
-//   </div>
