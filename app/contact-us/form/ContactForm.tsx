@@ -29,8 +29,8 @@ const ContactForm = () => {
     };
 
     return (
-        <Box component="form" className='flex flex-col  justify-center bg-[#F0F1F8] p-3 lg:p-10 text-black m-4' noValidate autoComplete="off" onSubmit={handleSubmit} >
-            <Heading class='w-full'>Corporate Contact Us Form</Heading>
+        <Box component="form" className='flex flex-col  justify-center bg-fg rounded-lg p-3 lg:p-10 text-black m-4' noValidate autoComplete="off" onSubmit={handleSubmit} >
+            <Heading class='w-full'>Contact Us</Heading>
             <div className="flex flex-wrap  justify-center">
             
             <TextField

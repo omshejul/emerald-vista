@@ -54,7 +54,7 @@ interface CardProps{
 }
 const Card:React.FC<CardProps> = (props) => {
   return (
-    <div className="card w-[350px]  h-min w-2xl p-4 md:p-6 lg:p-10 rounded-2xl m-2 bg-[#2B0738]">
+    <div className="card max-w-[350px] w-full  h-min w-2xl p-4 md:p-6 lg:p-10 rounded-2xl m-2 bg-[#2B0738]">
       {props.children}
     </div>
   )
