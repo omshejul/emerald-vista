@@ -100,7 +100,7 @@ const ContactForm = () => {
         </div>
       </div>
       <div className="flex justify-center w-full pt-4">
-        <Button type="submit" className=" py-3 px-6 bg-bg" variant="contained">
+        <Button type="submit" className=" py-3 px-12 bg-bg" variant="contained">
           Submit
         </Button>
       </div>

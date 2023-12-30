@@ -6,7 +6,6 @@ import styles from './Hero.module.css'; // assuming you have a CSS module for st
 const Hero = () => {
   const images = [
     "/hero/hero-image1.png",
-    "/hero/hero-image2.png",
     "/hero/hero-image3.png",
     "/hero/hero-image4.png",
     "/hero/hero-image5.png",

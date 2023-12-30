@@ -9,17 +9,16 @@ function Services() {
       <div className="services flex flex-col content-center justify-center ">
         <Heading class='text-center'>Our Services</Heading>
         <div className=" flex flex-wrap justify-center ">
-        <Link href="/our-services#servicesDiv">
-
+        <Link className="grid place-items-center" href="/our-services#servicesDiv">
           <img src="/services/1.png" className=" cursor-pointer hover:scale-105 transition-all -mx-10" width='350px' alt="" />
           </Link>
-        <Link href="/our-services#servicesDiv">
+        <Link className="grid place-items-center" href="/our-services#servicesDiv">
           <img src="/services/2.png" className=" cursor-pointer hover:scale-105 transition-all -mx-10" width='350px' alt="" />
           </Link>
-        <Link href="/our-services#servicesDiv">
+        <Link className="grid place-items-center" href="/our-services#servicesDiv">
           <img src="/services/3.png" className=" cursor-pointer hover:scale-105 transition-all -mx-10" width='350px' alt="" />
           </Link>
-        <Link href="/our-services#servicesDiv">
+        <Link className="grid place-items-center" href="/our-services#servicesDiv">
           <img src="/services/4.png" className=" cursor-pointer hover:scale-105 transition-all -mx-10" width='350px' alt="" />
           </Link>
         </div>

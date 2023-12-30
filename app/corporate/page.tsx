@@ -11,7 +11,9 @@ const page = () => {
         <main className="flex min-h-screen flex-col items-center">
             <Nav />
             <ContactBtn />
-            <Heading class="pt-28">Offers for Our Corporate Clients</Heading>
+            <Heading class="pt-28">Our Corporate Customers</Heading>
+            <CompanyLogos/><div className="my-10"></div>
+            <Heading >Offers for Our Corporate Clients</Heading>
             <div className="flex justify-center flex-wrap">
                 <div className="card p-8 m-5 max-w-md flex flex-col items-center text-center text-gray-700 bg-[#F0F1F8]">
                     <img src="/corporate/cards/1.svg" width="48px" alt="" />
@@ -27,8 +29,6 @@ const page = () => {
             <Para>
                 At Emerald Vista Luxury Suites, we extend a warm invitation to our esteemed corporate guests, recognizing the unique needs of long-term stays. Our facility is specially designed to provide a comfortable and productive environment for business travelers. As part of our commitment to fostering lasting relationships with corporate partners, we have established agreements with prominent companies such as Lupin India, Tata Consultancy Ltd., Calsoft, and more. To enhance the corporate experience, we offer exclusive special offers and discounts for our valued corporate guests. For detailed information on corporate discounts or to explore potential collaborations, we encourage interested parties to reach out to us directly. Contact us to discover how Emerald Vista Luxury Suites can elevate the stay for your corporate travelers with tailored packages and unparalleled hospitality.
             </Para>
-            <Heading>Our Corporate Customers</Heading>
-            <CompanyLogos/><div className="my-10"></div>
             <Form />
             <Footer />
         </main>

@@ -6,8 +6,7 @@ const Amenities = () => {
   const imgSize = 4
   return (
     <div className='max-w-1xl'>
-      <Heading>Amenities</Heading>
-      <h2 className='text-center text-base md:text-left md:text-2xl my-8 ml-4 '>Room Amenities</h2>
+      <Heading>Room Amenities</Heading>
       <div className="container flex w-full items-center justify-center">
         <div className="  items-center grid md:grid-cols-2 lg:grid-cols-3 p-3 w-full max-w-7xl">
           <Pill class={pillClass} imgSize={imgSize} img='/amenities/room/Intercom.png'>Intercom</Pill>
@@ -24,7 +23,7 @@ const Amenities = () => {
           <Pill class={pillClass} imgSize={imgSize} img='/amenities/room/Wi-Fi.png'>Wi-Fi</Pill>
         </div>
       </div>
-      <h2 className='text-center text-base md:text-left md:text-2xl my-8 ml-4'>Property Amenities</h2>
+      <Heading>Property Amenities</Heading>
       <div className="container flex w-full items-center justify-center">
         <div className="items-center grid md:grid-cols-2 lg:grid-cols-3 p-3 w-full max-w-7xl">
           <Pill class={pillClass} imgSize={imgSize} img='/amenities/property/CCTV Cameras.png'>CCTV Cameras</Pill>

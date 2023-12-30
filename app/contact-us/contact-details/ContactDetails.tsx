@@ -1,10 +1,5 @@
 import React from 'react';
-import { Adamina } from "next/font/google";
 
-const adamina = Adamina({
-  subsets: ["latin"],
-  weight: "400",
-});
 const ContactDetails = () => {
     return (
 
@@ -12,27 +7,28 @@ const ContactDetails = () => {
             <div>
                 <div className='p-4'>
                     <h2>Emerald Vista Front Office:</h2>
-                    <p className={adamina.className}>7768855757</p>
+                    <a href="tel:+917821840191">+91 78218 40191</a>
                 </div>
                 <div className='p-4'>
-                    <h2>Contact Person: Mr. Jayant Sadavarte</h2>
-                    <p className={adamina.className}>9823303957</p>
+                    <h2>Contact Person: Miss. Yashashree Sadavarte</h2>
+                    <a href="tel:+919823095600">+91 98230 95600</a>
+
                 </div>
             </div>
             <div>
                 <div className='p-4'>
-                    <h2>Emerald Vista Front Office:</h2>
-                    <p className={adamina.className}>737852079</p>
+                    <h2>Contact Person: Mr. Krishna Sadavarte</h2>
+                    <a href="tel:+917378452079">+91 73784 52079</a>
                 </div>
                 <div className='p-4'>
-                    <h2>Contact Person: Miss. Yashashree Sadavarte</h2>
-                    <p className={adamina.className}>9823095600</p>
+                    <h2>Contact Person: Mr. Jayant Sadavarte</h2>
+                    <a href="tel:+919823303957">+91 98233 03957</a>
                 </div>
             </div>
             <div>
                 <div className='p-4'>
                     <h2>Email Id:</h2>
-                    <p className={adamina.className}>emeraldvistaluxurysuites@gmail.com</p>
+                    <a href="mailto:emeraldvistaluxurysuites@gmail.com">emeraldvistaluxurysuites@gmail.com</a>
                 </div>
             </div>
         </div>

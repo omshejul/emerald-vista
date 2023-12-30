@@ -41,12 +41,12 @@ const Page: React.FC = () => {
         <main className="flex min-h-screen flex-col items-center">
             <Nav />
             <ContactBtn />
-            <div className="-z-10 w-full overflow-clip h-screen">
-            <video className='w-full object-cover h-screen'  autoPlay muted loop >
-            <source src="/our-services/video.webm" />
-            </video>
+            <div className="">
+
             </div>
-            <div className="mt-8"></div>
+            <div className="mt-40 w-full max-w-5xl h-max">
+            <iframe className='w-full aspect-video' src="https://www.youtube.com/embed/kUgafETXzYc?si=-qQmbxwD0FJh2czk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+            </div>
             <Heading class="">Our Services</Heading>
             <Subheading>
                 Welcome to Emerald Vista Luxury Suites, where indulgence meets comfort
