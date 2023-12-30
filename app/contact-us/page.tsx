@@ -12,7 +12,7 @@ const page = () => {
         <main className="flex min-h-screen flex-col items-center">
             <Nav />
             <ContactBtn />
-            <Heading class="pt-28">Contact Us</Heading>
+            <Heading class="pt-28"> </Heading>
             <Subheading>Welcome to Emerald Vista, where luxury meets exceptional service. We invite you to reach out to us with any questions or concerns.</Subheading>
             <div className=" justify-center items-center bg-fg text-bg py-5 lg:py-20 m-5 flex w-full max-w-5xl">
                 <Para className=" max-w-lg">We don&apos;t just sell you an accommodation at the Emerald Vista. We specialize in crafting experiences for you.</Para>
