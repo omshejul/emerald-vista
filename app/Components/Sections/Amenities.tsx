@@ -11,7 +11,7 @@ const Amenities = () => {
       <div className="container flex w-full items-center justify-center">
         <div className="  items-center grid md:grid-cols-2 lg:grid-cols-3 p-3 w-full max-w-7xl">
           <Pill class={pillClass} imgSize={imgSize} img='/amenities/room/Intercom.png'>Intercom</Pill>
-          <Pill class={pillClass} imgSize={imgSize} img='/amenities/room/24*7 Running Hot Water.png'>24*7 Running Hot Water</Pill>
+          <Pill class={pillClass} imgSize={imgSize} img='/amenities/room/24x7 Running Hot Water.png'>24*7 Running Hot Water</Pill>
           <Pill class={pillClass} imgSize={imgSize} img='/amenities/room/Balcony.png'>Balcony</Pill>
           <Pill class={pillClass} imgSize={imgSize} img='/amenities/room/Tea-Coffee Maker.png'>Tea-Coffee Maker</Pill>
           <Pill class={pillClass} imgSize={imgSize} img='/amenities/room/Air Conditioner.png'>Air Conditioner</Pill>
