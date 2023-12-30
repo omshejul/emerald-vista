@@ -46,6 +46,7 @@ const Page: React.FC = () => {
             <source src="/our-services/video.webm" />
             </video>
             </div>
+            <div className="mt-8"></div>
             <Heading class="">Our Services</Heading>
             <Subheading>
                 Welcome to Emerald Vista Luxury Suites, where indulgence meets comfort
