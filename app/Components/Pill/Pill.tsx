@@ -2,7 +2,7 @@ import React from "react";
 interface PillProps {
   img: string;
   class: string;
-  children: string;
+  children: any;
   imgSize?: number;
 }
 const Pill: React.FC<PillProps> = (props) => {
