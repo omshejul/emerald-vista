@@ -15,6 +15,12 @@ const companyLogos = [
     '/corporate/company-logos/image-10.png',
     '/corporate/company-logos/image-11.png',
     '/corporate/company-logos/image-12.png',
+    '/corporate/company-logos/image-13.png',
+    '/corporate/company-logos/image-14.png',
+    '/corporate/company-logos/image-15.png',
+    '/corporate/company-logos/image-16.png',
+    '/corporate/company-logos/image-17.png',
+    '/corporate/company-logos/image-18.png',
 ];
 
 const Carousel = () => {
