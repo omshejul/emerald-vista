@@ -4,7 +4,8 @@ import Footer from "../Components/Sections/Footer"
 import Heading from "../Components/Text/Heading"
 import Para from "../Components/Text/Para"
 import CompanyLogos from "./company-logos/CompanyLogos"
-import Form from "./form/Form"
+import Form from "./form/CorporateForm"
+import { HiOutlineBriefcase,HiOutlineUserGroup   } from "react-icons/hi";
 
 const page = () => {
     return (
@@ -16,14 +17,14 @@ const page = () => {
             <Heading >Offers for Our Corporate Clients</Heading>
             <div className="flex justify-center flex-wrap">
                 <div className="card p-8 m-5 max-w-md flex flex-col items-center text-center text-gray-700 bg-[#F0F1F8]">
-                    <img src="/corporate/cards/1.svg" width="48px" alt="" />
-                    <p className=" p-2 text-2xl" >Incentive Vouchers</p>
-                    <p className=" text-gray-400 font-light p-2">Vouchers are a great way to reward and incentivize your teams. We have a variety of Machans available at different price points to suit your needs.</p>
+                    <HiOutlineBriefcase className="text-gray-500" size="48px"/>
+                    <p className=" p-2 text-2xl capitalize" >Corporate tie ups</p>
+                    <p className=" text-gray-500 font-light p-2">We offer special prices for corporates offering a seamless blend of comfort and functionality for your professional home-away-from-home experience.</p>
                 </div>
                 <div className="card p-8 m-5 max-w-md flex flex-col items-center text-center text-gray-700 bg-[#F0F1F8]">
-                    <img src="/corporate/cards/2.svg" width="48px" alt="" />
-                    <p className=" p-2 text-2xl" >Block Bookings</p>
-                    <p className=" text-gray-400 font-light p-2">We offer great rates for corporates looking to make a block booking with us. Please do reach out to us with your needs.</p>
+                    <HiOutlineUserGroup className="text-gray-500" size="48px"/>
+                    <p className=" p-2 text-2xl capitalize" >Bulk bookings</p>
+                    <p className=" text-gray-500 font-light p-2">Make your special occasions unforgettable with our service apartments exclusive deals for bulk reservations. Elevate weddings, family functions, and events with spacious, fully furnished accommodations.</p>
                 </div>
             </div>
             <Para>
