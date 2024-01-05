@@ -21,6 +21,8 @@ const Amenities = () => {
           <Pill class={pillClass} imgSize={imgSize} img='/amenities/room/Housekeeping.png'>Housekeeping</Pill>
           <Pill class={pillClass} imgSize={imgSize} img='/amenities/room/Refrigerator.png'>Refrigerator</Pill>
           <Pill class={pillClass} imgSize={imgSize} img='/amenities/room/Wi-Fi.png'>Wi-Fi</Pill>
+          <Pill class={pillClass} imgSize={imgSize} img='/amenities/room/Kitchenette.png'>Kitchenette</Pill>
+          <Pill class={pillClass} imgSize={imgSize} img='/amenities/room/Desk.png'>Desk</Pill>
         </div>
       </div>
       <Heading>Property Amenities</Heading>
