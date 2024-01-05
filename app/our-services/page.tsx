@@ -1,8 +1,9 @@
 "use client"
+import { useState, SetStateAction,useEffect } from 'react';
+
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import gallery1 from "public/about-us/photo-gallery/1.png";
-import { SetStateAction, useState } from 'react';
 import { HiOutlineX } from "react-icons/hi";
 import ContactBtn from "../Components/ContactBtn/ContactBtn";
 import Nav from "../Components/Nav";
@@ -31,6 +32,27 @@ const Page: React.FC = () => {
 
     const closeImageModal = () => setIsImageModalOpen(false);
     const [selectedTab, setSelectedTab] = useState('Premium Service Apartments');
+
+    useEffect(() => {
+        // Read the hash from the URL (window.location.hash)
+        const hash = window.location.hash.replace('#', ''); // Remove '#' from hash
+        console.log(window.location.hash);
+        
+        // Set selectedTab based on the hash
+        if (hash === 'premium') setSelectedTab('Premium Service Apartments');
+        else if (hash === 'deluxe') setSelectedTab('Deluxe Service Apartments');
+        else if (hash === 'terrace') setSelectedTab('Terrace Garden');
+        else if (hash === 'restaurant') setSelectedTab('Restaurant');
+
+        if (window.location.hash != '') {
+            // Find the element
+            const el = document.getElementById('servicesDiv');
+            if (el) {
+                // Scroll to the element smoothly
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    }, []);
     const tabs: TabItem[] = [
         { label: 'Premium Service Apartments', content: `Premium service apartment Indulge in the epitome of luxury with our Premium Service Apartments at Emerald Vista Luxury Suites. Nestled on the top floors, these exclusive 1-room kitchen apartments boast a lavish carpet area of 450 sq ft and feature all-new, posh premium interiors for a truly opulent experience.        As you enter, you are greeted by a meticulously designed living room seamlessly connected to a sleek kitchenette, leading to a private balcony with breath taking views. The bedroom, with an attached washroom, exudes comfort and sophistication.        Each Premium Service Apartment is fully air-conditioned, ensuring a delightful ambiance throughout your stay. To elevate your experience, we provide essential amenities including crockery, cutlery, a refrigerator, microwave, television, Wi-Fi, and a tea and coffee maker. These facilities are thoughtfully curated to cater to your every need, ensuring a seamless and luxurious stay.        Ideal for accommodating two persons, the Premium Service Apartment can graciously host up to a maximum of four persons, making it an ideal choice for couples, families, or small groups. Whether you seek a tranquil retreat or a lavish staycation, Emerald Vista Luxury Suites promises an unparalleled experience in our Premium Service Apartments.` },
         { label: 'Deluxe Service Apartments', content: 'Welcome  to Emerald Vista Luxury Suites, where indulgence meets comfort in our Deluxe Service Apartments. These meticulously designed 1-room kitchen apartments boast a generous carpet area of 450 sq ft, providing a spacious and inviting environment for our guests.        Each Deluxe Service Apartment features a well-appointed living room seamlessly connected to a compact kitchenette, allowing for a convenient and cozy living experience. A private balcony offers a breath of fresh air and a tranquil space to unwind. The bedroom is a sanctuary of relaxation, complete with an attached washroom for added convenience.        Our Deluxe Service Apartments are fully air-conditioned, ensuring a pleasant atmosphere throughout your stay. To enhance your living experience, we provide essential amenities such as crockery, cutlery, a refrigerator, microwave, television, Wi-Fi, and a tea and coffee maker. These thoughtful touches are aimed at making your stay as comfortable and enjoyable as possible.    Ideal for accommodating two persons, the Deluxe Service Apartment can graciously host up to a maximum of four persons, making it a versatile choice for couples, families, or small groups. Whether you are traveling for business or leisure, Emerald Vista Luxury Suites promises a luxurious and convenient stay in our Deluxe Service Apartments.' },
@@ -55,7 +77,7 @@ const Page: React.FC = () => {
 
             <div>
                 {/* Tab buttons */}
-                <div className="tabContainer w-full flex justify-center text-center">
+                <div className="tabContainer w-full flex justify-center text-center" id='servicesDiv'>
 
                     {tabs.map((tab) => (
                         <Tab
@@ -78,7 +100,7 @@ const Page: React.FC = () => {
                                 exit="exit"
                                 variants={tabVariants}
                             >
-                                <div id='servicesDiv' className="container py-4 px-1 lg:px-4 flex flex-wrap">
+                                <div  className="container py-4 px-1 lg:px-4 flex flex-wrap">
                                     <div
                                         onClick={() => openImageModal(`/our-services/${tab.label}/main.png`)}
                                         className="mainImageDiv w-1/3 relative place-self-center col-span-1 cursor-pointer"
