@@ -18,7 +18,7 @@ function Services() {
         <Link className="grid place-items-center" href="/our-services#terrace">
           <img src="/services/3.png" className=" cursor-pointer hover:scale-105 transition-all -mx-10" width='350px' alt="" />
           </Link>
-        <Link className="grid place-items-center" href="/our-services#restraunt">
+        <Link className="grid place-items-center" href="/our-services#restaurant">
           <img src="/services/4.png" className=" cursor-pointer hover:scale-105 transition-all -mx-10" width='350px' alt="" />
           </Link>
         </div>
