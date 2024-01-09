@@ -21,7 +21,7 @@ const Amenities = () => {
           <Pill class={classCustom} imgSize={imgSize} img='/amenities/room/Housekeeping.png'>Housekeeping</Pill>
           <Pill class={classCustom} imgSize={imgSize} img='/amenities/room/Refrigerator.png'>Refrigerator</Pill>
           <Pill class={classCustom} imgSize={imgSize} img='/amenities/room/Wi-Fi.png'>Wi-Fi</Pill>
-          <div className="flex justify-center col-span-full">
+          <div className="flex flex-wrap justify-center col-span-full">
           <Pill class={`w-full lg:w-max ${classCustom}`} imgSize={imgSize} img='/amenities/room/Kitchenette.png'>Kitchenette</Pill>
           <Pill class={`w-full lg:w-max ${classCustom}`} imgSize={imgSize} img='/amenities/room/Desk.png'>Desk</Pill>
           </div>
