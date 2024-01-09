@@ -31,13 +31,13 @@
 }
 
 .slider::after {
-  right: 0;
+  right: -1px;
   top: 0;
   transform: rotateZ(180deg);
 }
 
 .slider::before {
-  left: 0;
+  left: -1px;
   top: 0;
 }
 

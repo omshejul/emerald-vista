@@ -23,11 +23,11 @@ const Footer = () => {
             </div>
             <div className="px-2 py-4">
               <div className="heading font-semibold text-xl">Emerald Vista Front Office:</div>
-              <div className="content">7768855757</div>
+              <a className="content" href="tel:+917768855757">+91 77688 55757</a>
             </div>
             <div className="px-2 py-4">
               <div className="heading font-semibold text-xl">Email</div>
-              <div className="content">emeraldvistaluxurtsuites@gmail.com</div>
+              <a className="content" href="mailto:emeraldvistaluxurysuites@gmail.com">emeraldvistaluxurysuites@gmail.com</a>
             </div>
           </div>
         </div>

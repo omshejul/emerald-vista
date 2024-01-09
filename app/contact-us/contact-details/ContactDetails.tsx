@@ -2,7 +2,6 @@ import React from 'react';
 
 const ContactDetails = () => {
     return (
-
         <div className='p-5 m-5'>
             <div>
                 <div className='p-4'>
