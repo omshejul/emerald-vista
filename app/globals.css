@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --fg:#fff;
+    --bg:#1D0027;
+    --accent:#F8E6D0;
+    --accent-yellow:#FFED00;
+
+    --length: min(1rem, 3.086049543676662vw);
+}
+body{
+    font-size: var(--length);
+    background-color: var(--bg);
+    color: var(--fg);
+}
+
+a:hover{
+    text-decoration: underline var(--accent-yellow);
+}
+nav{
+    max-width: 1440px;
+}
+.container{
+    max-width: 1440px;
+}
+b{ 
+    font-weight: 600;
+}
