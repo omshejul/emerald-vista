@@ -1,5 +1,5 @@
 "use client"
-import { useState, SetStateAction,useEffect } from 'react';
+import { useState, SetStateAction, useEffect } from 'react';
 
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
@@ -37,7 +37,7 @@ const Page: React.FC = () => {
         // Read the hash from the URL (window.location.hash)
         const hash = window.location.hash.replace('#', ''); // Remove '#' from hash
         console.log(window.location.hash);
-        
+
         // Set selectedTab based on the hash
         if (hash === 'premium') setSelectedTab('Premium Service Apartments');
         else if (hash === 'deluxe') setSelectedTab('Deluxe Service Apartments');
@@ -67,7 +67,7 @@ const Page: React.FC = () => {
 
             </div>
             <div className="mt-40 w-full max-w-5xl h-max">
-            <iframe className='w-full aspect-video' src="https://www.youtube.com/embed/kUgafETXzYc?si=-qQmbxwD0FJh2czk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                <iframe className='w-full aspect-video' src="https://www.youtube.com/embed/kUgafETXzYc?si=-qQmbxwD0FJh2czk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </div>
             <Heading class="">Our Services</Heading>
             <Subheading>
@@ -100,7 +100,7 @@ const Page: React.FC = () => {
                                 exit="exit"
                                 variants={tabVariants}
                             >
-                                <div  className="container py-4 px-1 lg:px-4 flex flex-wrap">
+                                <div className="container py-4 px-1 lg:px-4 flex flex-wrap">
                                     <div
                                         onClick={() => openImageModal(`/our-services/${tab.label}/main.png`)}
                                         className="mainImageDiv w-1/3 relative place-self-center col-span-1 cursor-pointer"
@@ -115,48 +115,20 @@ const Page: React.FC = () => {
                                         />
                                     </div>
                                     <div className="imgGridContainer w-2/3 lg:py-10 grid  grid-rows-2 grid-cols-3 gap-4">
-                                        <div className='imgContainer relative cursor-pointer'
-                                        onClick={() => openImageModal(`/our-services/${tab.label}/image-1.png`)}><Image
-                                            src={`/our-services/${tab.label}/image-1.png`}
-                                            className=' object-contain'
-                                            fill
-                                            alt="img1"
-                                        /></div>
-                                        <div className='imgContainer relative cursor-pointer'
-                                        onClick={() => openImageModal(`/our-services/${tab.label}/image-2.png`)}><Image
-                                            src={`/our-services/${tab.label}/image-2.png`}
-                                            className=' object-contain'
-                                            fill
-                                            alt="img2"
-                                        /></div>
-                                        <div className='imgContainer relative cursor-pointer'
-                                        onClick={() => openImageModal(`/our-services/${tab.label}/image-3.png`)}><Image
-                                            src={`/our-services/${tab.label}/image-3.png`}
-                                            className=' object-contain'
-                                            fill
-                                            alt="img3"
-                                        /></div>
-                                        <div className='imgContainer relative cursor-pointer'
-                                        onClick={() => openImageModal(`/our-services/${tab.label}/image-4.png`)}><Image
-                                            src={`/our-services/${tab.label}/image-4.png`}
-                                            className=' object-contain'
-                                            fill
-                                            alt="img4"
-                                        /></div>
-                                        <div className='imgContainer relative cursor-pointer'
-                                        onClick={() => openImageModal(`/our-services/${tab.label}/image-5.png`)}><Image
-                                            src={`/our-services/${tab.label}/image-5.png`}
-                                            className=' object-contain'
-                                            fill
-                                            alt="img5"
-                                        /></div>
-                                        <div className='imgContainer relative cursor-pointer'
-                                        onClick={() => openImageModal(`/our-services/${tab.label}/image-6.png`)}><Image
-                                            src={`/our-services/${tab.label}/image-6.png`}
-                                            className=' object-contain'
-                                            fill
-                                            alt="img6"
-                                        /></div>
+                                        {Array.from({ length: 6 }, (_, index) => {
+                                            const imageNumber = index + 1;
+                                            return (
+                                                <div key={imageNumber} className='imgContainer relative cursor-pointer'
+                                                    onClick={() => openImageModal(`/our-services/${tab.label}/image-${imageNumber}.png`)}>
+                                                    <Image
+                                                        src={`/our-services/${tab.label}/image-${imageNumber}.png`}
+                                                        className='object-contain'
+                                                        fill
+                                                        alt={`img${imageNumber}`}
+                                                    />
+                                                </div>
+                                            );
+                                        })}
                                     </div>
                                 </div>
                                 <Para>
@@ -168,12 +140,12 @@ const Page: React.FC = () => {
                 </AnimatePresence>
             </div>
             <Heading>Photo Gallery</Heading>
-      <Image src={gallery1} alt="" />
+            <Image src={gallery1} alt="" />
             {isImageModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center" onClick={closeImageModal}>
                     <div className="relative" onClick={(e) => e.stopPropagation()}>
                         <Image src={currentImage} className='max-h-screen object-cover' height={1000} width={1000} alt="Modal Image" />
-                        <button className="absolute top-0 right-0 m-10 bg-black bg-opacity-50 shadow-lg rounded-full p-2 aspect-square" onClick={closeImageModal}><HiOutlineX/></button>
+                        <button className="absolute top-0 right-0 m-10 bg-black bg-opacity-50 shadow-lg rounded-full p-2 aspect-square" onClick={closeImageModal}><HiOutlineX /></button>
                     </div>
                 </div>
             )}
