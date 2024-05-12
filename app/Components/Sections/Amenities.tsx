@@ -26,7 +26,6 @@ const Amenities = () => {
           <Pill class={classCustom} imgSize={imgSize} img='/amenities/Inroom balcony.png'>Inroom balcony</Pill>
         </div>
       </div>
-      <Heading>Property Amenities</Heading>
       <div className="container w-full items-center justify-center">
         <ResponsiveMasonry
           columnsCountBreakPoints={{ 350: 1, 900: 2, 1000: 3 }}
