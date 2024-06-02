@@ -64,7 +64,7 @@ const Amenities = () => {
               <Pill class={detailsClassCustom} imgSize={detailsImgSize} img='/amenities/tick.svg'>Balcony</Pill>
             </div>
             <div>
-              <Pill class={`${classCustom} md:mt-16`} imgSize={imgSize} img='/amenities/Bathroom.svg'>Bathroom</Pill>
+              <Pill class={`${classCustom} lg:mt-16`} imgSize={imgSize} img='/amenities/Bathroom.svg'>Bathroom</Pill>
               <Pill class={detailsClassCustom} imgSize={detailsImgSize} img='/amenities/tick.svg'>24 hours hot water</Pill>
               <Pill class={detailsClassCustom} imgSize={detailsImgSize} img='/amenities/tick.svg'>Towels</Pill>
               <Pill class={detailsClassCustom} imgSize={detailsImgSize} img='/amenities/tick.svg'>Toilet paper</Pill>
@@ -77,7 +77,7 @@ const Amenities = () => {
               <Pill class={detailsClassCustom} imgSize={detailsImgSize} img='/amenities/tick.svg'>Laundry</Pill>
             </div>
             <div>
-              <Pill class={`${classCustom} md:mt-16`} imgSize={imgSize} img='/amenities/Living room.svg'>Living room</Pill>
+              <Pill class={`${classCustom} lg:mt-16`} imgSize={imgSize} img='/amenities/Living room.svg'>Living room</Pill>
               <Pill class={detailsClassCustom} imgSize={detailsImgSize} img='/amenities/tick.svg'>Couch </Pill>
               <Pill class={detailsClassCustom} imgSize={detailsImgSize} img='/amenities/tick.svg'>Television</Pill>
               <Pill class={detailsClassCustom} imgSize={detailsImgSize} img='/amenities/tick.svg'>Cable channels</Pill>
@@ -85,7 +85,7 @@ const Amenities = () => {
               <Pill class={detailsClassCustom} imgSize={detailsImgSize} img='/amenities/tick.svg'>Teapoy table</Pill>
             </div>
             <div>
-              <Pill class={`${classCustom} md:mt-16`} imgSize={imgSize} img='/amenities/Inroom balcony.png'>Balcony</Pill>
+              <Pill class={`${classCustom} lg:mt-16`} imgSize={imgSize} img='/amenities/Inroom balcony.png'>Balcony</Pill>
               <Pill class={detailsClassCustom} imgSize={detailsImgSize} img='/amenities/tick.svg'>Safety railings </Pill>
               <Pill class={detailsClassCustom} imgSize={detailsImgSize} img='/amenities/tick.svg'>Chair</Pill>
               <Pill class={detailsClassCustom} imgSize={detailsImgSize} img='/amenities/tick.svg'>Scenic view</Pill>
@@ -98,7 +98,7 @@ const Amenities = () => {
               <Pill class={detailsClassCustom} imgSize={detailsImgSize} img='/amenities/tick.svg'>24-hours security</Pill>
             </div>
             <div>
-              <Pill class={`${classCustom} md:mt-16`} imgSize={imgSize} img='/amenities/In-room kitchenette.png'>In-room kitchenette</Pill>
+              <Pill class={`${classCustom} lg:mt-16`} imgSize={imgSize} img='/amenities/In-room kitchenette.png'>In-room kitchenette</Pill>
               <Pill class={detailsClassCustom} imgSize={detailsImgSize} img='/amenities/tick.svg'>Refrigerator</Pill>
               <Pill class={detailsClassCustom} imgSize={detailsImgSize} img='/amenities/tick.svg'>Microwave</Pill>
               <Pill class={detailsClassCustom} imgSize={detailsImgSize} img='/amenities/tick.svg'>Electric kettle</Pill>
@@ -110,7 +110,7 @@ const Amenities = () => {
               <Pill class={detailsClassCustom} imgSize={detailsImgSize} img='/amenities/tick.svg'>Complimentary water bottle</Pill>
             </div>
             <div>
-              <Pill class={`${classCustom} md:mt-20`} imgSize={imgSize} img='/amenities/Inhouse restaurant.svg'>Inhouse restaurant</Pill>
+              <Pill class={`${classCustom} lg:mt-20`} imgSize={imgSize} img='/amenities/Inhouse restaurant.svg'>Inhouse restaurant</Pill>
               <Pill class={detailsClassCustom} imgSize={detailsImgSize} img='/amenities/tick.svg'>Homestyle cooked food</Pill>
               <Pill class={detailsClassCustom} imgSize={detailsImgSize} img='/amenities/tick.svg'>Breakfast</Pill>
               <Pill class={detailsClassCustom} imgSize={detailsImgSize} img='/amenities/tick.svg'>Safety & Hygiene</Pill>
@@ -135,12 +135,12 @@ const Amenities = () => {
             <div>{/* blank */}</div>
             <div>{/* blank */}</div>
             <div>
-              <Pill class={`${classCustom} -mt-0`} imgSize={imgSize} img='/amenities/Parking.svg'>Parking</Pill>
+              <Pill class={`${classCustom} lg:mt-1`} imgSize={imgSize} img='/amenities/Parking.svg'>Parking</Pill>
             </div>
             <div>{/* blank */}</div>
             <div>{/* blank */}</div>
             <div>
-              <Pill class={`${classCustom} -mt-0`} imgSize={imgSize} img='/amenities/Wifi.svg'>Internet</Pill>
+              <Pill class={`${classCustom} lg:mt-1`} imgSize={imgSize} img='/amenities/Wifi.svg'>Internet</Pill>
             </div>
           </Masonry>
         </ResponsiveMasonry>
