@@ -17,13 +17,12 @@ export default function Home() {
       <ContactBtn />
 
       <Heading class="pt-28"> </Heading>
+      <div className="p-8">
       <Image src={journey} alt="journey" />
-      <div className="grid container place-items-center mt-20 lg:grid-cols-2">
-        <div className=" max-w-xl p-4 h-max lg:max-w-5xl lg:rounded-3xl lg:drop-shadow-2xl  flex justify-center overflow-hidden">
-          <Image src={img1} alt="Hero" />
-        </div>
+      </div>
+      <div className="grid container place-items-center mt-20">
         <Para className="flex items-center">
-          <div className="lg:text-left max-w-[50ch]">
+          <div className="lg:text-center">
             Emerald Vista Luxury Suites is the brainchild of Mr. Jayant
             Sadavarte, a visionary entrepreneur and the driving force behind the
             esteemed construction firm, Jayant Sadavarte & Associates. In 2019,
