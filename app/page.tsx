@@ -8,7 +8,6 @@ import Footer from "./Components/Sections/Footer";
 import Hero from "./Components/Sections/Hero";
 import ContactBtn from "./Components/ContactBtn/ContactBtn";
 
-
 export default function Home() {
 
   return (

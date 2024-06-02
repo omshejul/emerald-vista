@@ -2,29 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-    --fg:#fff;
-    --bg:#1D0027;
-    --accent:#F8E6D0;
-    --accent-yellow:#FFED00;
+:root {
+  --fg: #fff;
+  --bg: #1d0027;
+  --accent: #f8e6d0;
+  --accent-yellow: #ffed00;
 
-    --length: min(1rem, 3.086049543676662vw);
-}
-body{
-    font-size: var(--length);
-    background-color: var(--bg);
-    color: var(--fg);
+  --length: min(1rem, 3.086049543676662vw);
 }
 
-a:hover{
-    text-decoration: underline var(--accent-yellow);
+body {
+  font-size: var(--length);
+  background-color: var(--bg);
+  color: var(--fg);
 }
-nav{
-    max-width: 1440px;
+
+a:hover {
+  text-decoration: underline var(--accent-yellow);
 }
-.container{
-    max-width: 1440px;
+
+nav {
+  max-width: 1440px;
 }
-b{ 
-    font-weight: 600;
+
+.container {
+  max-width: 1440px;
+}
+
+b {
+  font-weight: 600;
+}
+
+::selection {
+  background-color: #ffcc00;
+  color: #000000;
+}
+
+::-webkit-selection {
+  background-color: #ffcc00;
+  color: #000000;
+}
+
+::-moz-selection {
+  background-color: #ffcc00;
+  color: #000000;
 }
