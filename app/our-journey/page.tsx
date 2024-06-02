@@ -6,10 +6,6 @@ import Para from "../Components/Text/Para";
 
 import Image from "next/image";
 
-// Images
-import journey from "public/about-us/journey.svg";
-import img1 from "public/about-us/group-photo.png";
-
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center ">
@@ -17,12 +13,12 @@ export default function Home() {
       <ContactBtn />
 
       <Heading class="pt-28"> </Heading>
-      <div className="p-8">
-      <Image src={journey} alt="journey" />
+
+      <div className="relative w-[90%] h-[30vw]">
+      <Image src={"/about-us/journey.svg"} fill alt="journey" />
       </div>
       <div className="grid container place-items-center mt-20">
         <Para className="flex items-center">
-          <div className="lg:text-center">
             Emerald Vista Luxury Suites is the brainchild of Mr. Jayant
             Sadavarte, a visionary entrepreneur and the driving force behind the
             esteemed construction firm, Jayant Sadavarte & Associates. In 2019,
@@ -37,7 +33,6 @@ export default function Home() {
             affairs of the facility. Their commitment to quality and hospitality
             reflects the family&apos;s dedication to providing an unparalleled
             experience for the guests of Emerald Vista Luxury Suites.
-          </div>
         </Para>
       </div>
       <Footer />
