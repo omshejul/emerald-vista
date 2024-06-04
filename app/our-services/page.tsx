@@ -3,7 +3,7 @@ import { useState, SetStateAction, useEffect } from 'react'
 
 import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
-import gallery1 from "public/about-us/photo-gallery/1.png"
+import gallery1 from "public/about-us/photo-gallery/1.jpg"
 import { HiOutlineX } from "react-icons/hi"
 import ContactBtn from "../Components/ContactBtn/ContactBtn"
 import Nav from "../Components/Nav"
@@ -102,61 +102,30 @@ const Page: React.FC = () => {
                             >
                                 <div className="container py-4 px-1 lg:px-4 flex flex-wrap">
                                     <div
-                                        onClick={() => openImageModal(`/our-services/${tab.label}/main.png`)}
-                                        className="mainImageDiv w-1/3 relative place-self-center col-span-1 cursor-pointer"
+                                        onClick={() => openImageModal(`/our-services/${tab.label}/1.jpg`)}
+                                        className="mainImageDiv  w-1/2 relative place-self-center col-span-1 cursor-pointer"
                                     >
-                                        <div className="absolute text-xl top-1/2 left-1/2 text-center transform -translate-x-1/2 -translate-y-1/2 ">{tab.label}</div>
+                                        <div className="absolute  text-xl top-1/2 left-1/2 text-center transform -translate-x-1/2 -translate-y-1/2 ">{tab.label}</div>
                                         <Image
-                                            src={`/our-services/${tab.label}/main.png`}
-                                            width={500}
-                                            height={500}
+                                            src={`/our-services/${tab.label}/1.jpg`}
+                                            width={1000}
+                                            height={1000}
                                             alt="Hero"
-                                            className='opacity-50'
+                                            className='opacity-50 rounded'
                                         />
                                     </div>
-                                    <div className="imgGridContainer w-2/3 lg:py-10 grid  grid-rows-2 grid-cols-3 gap-4">
-                                        <div className='imgContainer relative cursor-pointer'
-                                            onClick={() => openImageModal(`/our-services/${tab.label}/image-1.png`)}><Image
-                                                src={`/our-services/${tab.label}/image-1.png`}
-                                                className=' object-contain'
-                                                fill
-                                                alt="img1"
-                                            /></div>
-                                        <div className='imgContainer relative cursor-pointer'
-                                            onClick={() => openImageModal(`/our-services/${tab.label}/image-2.png`)}><Image
-                                                src={`/our-services/${tab.label}/image-2.png`}
-                                                className=' object-contain'
-                                                fill
-                                                alt="img2"
-                                            /></div>
-                                        <div className='imgContainer relative cursor-pointer'
-                                            onClick={() => openImageModal(`/our-services/${tab.label}/image-3.png`)}><Image
-                                                src={`/our-services/${tab.label}/image-3.png`}
-                                                className=' object-contain'
-                                                fill
-                                                alt="img3"
-                                            /></div>
-                                        <div className='imgContainer relative cursor-pointer'
-                                            onClick={() => openImageModal(`/our-services/${tab.label}/image-4.png`)}><Image
-                                                src={`/our-services/${tab.label}/image-4.png`}
-                                                className=' object-contain'
-                                                fill
-                                                alt="img4"
-                                            /></div>
-                                        <div className='imgContainer relative cursor-pointer'
-                                            onClick={() => openImageModal(`/our-services/${tab.label}/image-5.png`)}><Image
-                                                src={`/our-services/${tab.label}/image-5.png`}
-                                                className=' object-contain'
-                                                fill
-                                                alt="img5"
-                                            /></div>
-                                        <div className='imgContainer relative cursor-pointer'
-                                            onClick={() => openImageModal(`/our-services/${tab.label}/image-6.png`)}><Image
-                                                src={`/our-services/${tab.label}/image-6.png`}
-                                                className=' object-contain'
-                                                fill
-                                                alt="img6"
-                                            /></div>
+                                    <div className="imgGridContainer pl-5 w-1/2 lg:py-10 grid  grid-rows-2 grid-cols-2 gap-4">
+                                        {Array(4).fill(0).map((_, index) => (
+                                            <div key={index} className='imgContainer relative cursor-pointer'
+                                                onClick={() => openImageModal(`/our-services/${tab.label}/${index + 2}.jpg`)}>
+                                                <Image
+                                                    src={`/our-services/${tab.label}/${index + 2}.jpg`}
+                                                    className=' object-cover rounded'
+                                                    fill
+                                                    sizes="50vw"
+                                                    alt={`img${index + 2}`}
+                                                /></div>
+                                        ))}
                                     </div>
                                 </div>
                                 <Para>
@@ -167,6 +136,9 @@ const Page: React.FC = () => {
                     ))}
                 </AnimatePresence>
             </div>
+            {isImageModalOpen && (
+                <ImageModal imageUrl={currentImage} onClose={closeImageModal} />
+            )}
             <Footer />
         </main>
     )
@@ -188,5 +160,26 @@ const Tab: React.FC<TabProps> = ({ label, isActive, onClick }) => {
         >
             {label}
         </button>
+    )
+}
+
+const ImageModal: React.FC<{ imageUrl: string, onClose: () => void }> = ({ imageUrl, onClose }) => {
+    return (
+        <div className="fixed inset-0 p-2 bg-black bg-opacity-75 grid place-items-center">
+            <div className="relative w-full h-full max-w-5xl max-h-[50vw]">
+                <button
+                    className="absolute z-20 top-4 right-4 bg-black rounded-full border-zinc-500 border text-white text-2xl p-2 bg-opacity-50"
+                    onClick={onClose}
+                >
+                    <HiOutlineX />
+                </button>
+                <Image
+                    src={imageUrl}
+                    fill
+                    alt="Modal Image"
+                    className="rounded z-10 object-cover"
+                />
+            </div>
+        </div>
     )
 }
