@@ -18,8 +18,8 @@ const page = () => {
                 >
                     <Masonry className="p-2">
                         {Array.from({ length: 20 }).map((_, i) => (
-                            <div className="p-2">
-                                <img src={`/photo-gallery/${i + 1}.jpg`} key={`${i}`} alt="" />
+                            <div className="p-2" key={`${i}`}>
+                                <img src={`/photo-gallery/${i + 1}.jpg`}  alt="" />
                             </div>
                         ))}
                     </Masonry>
