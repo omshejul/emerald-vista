@@ -1,5 +1,4 @@
 "use client"
-
 import ContactBtn from "../Components/ContactBtn/ContactBtn"
 import Nav from "../Components/Nav"
 import Footer from "../Components/Sections/Footer"
@@ -14,12 +13,12 @@ const page = () => {
             <Heading class="pt-28"> Photo Gallery</Heading>
             <div className="w-full">
                 <ResponsiveMasonry
-                    columnsCountBreakPoints={{ 350: 1, 900: 2, 1000: 3 }}
+                    columnsCountBreakPoints={{ 350: 2, 900: 3, 1000: 3 }}
                 >
-                    <Masonry className="p-2">
+                    <Masonry className="p-1">
                         {Array.from({ length: 20 }).map((_, i) => (
-                            <div className="p-2" key={`${i}`}>
-                                <img src={`/photo-gallery/${i + 1}.jpg`}  alt="" />
+                            <div className="p-1 " key={`${i}`}>
+                                <img src={`/photo-gallery/${i + 1}.jpg`} className="rounded"  alt="" />
                             </div>
                         ))}
                     </Masonry>
