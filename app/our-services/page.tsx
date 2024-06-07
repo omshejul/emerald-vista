@@ -148,6 +148,7 @@ export default Page
 
 
 interface TabProps {
+    
     label: string
     isActive: boolean
     onClick: () => void // Assuming no arguments are passed to the click handler
