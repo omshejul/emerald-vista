@@ -129,7 +129,7 @@ const Page: React.FC = () => {
                   <div className="container py-4 px-1 lg:px-4 flex flex-wrap">
                     <div
                       onClick={() =>
-                        openImageModal(`/our-services/${tab.label}/1.jpg`)
+                        openImageModal(`/our-services/${tab.label}/image-1.jpg`)
                       }
                       className="mainImageDiv  w-1/2 relative place-self-center col-span-1 cursor-pointer"
                     >
@@ -137,7 +137,7 @@ const Page: React.FC = () => {
                         {tab.label}
                       </div>
                       <Image
-                        src={`/our-services/${tab.label}/1.jpg`}
+                        src={`/our-services/${tab.label}/image-1.jpg`}
                         width={1000}
                         height={1000}
                         alt="Hero"
@@ -153,12 +153,12 @@ const Page: React.FC = () => {
                             className="imgContainer relative cursor-pointer"
                             onClick={() =>
                               openImageModal(
-                                `/our-services/${tab.label}/${index + 2}.jpg`
+                                `/our-services/${tab.label}/image-${index + 2}.jpg`
                               )
                             }
                           >
                             <Image
-                              src={`/our-services/${tab.label}/${
+                              src={`/our-services/${tab.label}/image-${
                                 index + 2
                               }.jpg`}
                               className=" object-cover rounded"
