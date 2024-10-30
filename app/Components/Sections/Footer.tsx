@@ -29,6 +29,9 @@ const Footer = () => {
               <div className="heading font-semibold text-xl">Email</div>
               <a className="content" href="mailto:emeraldvistaluxurysuites@gmail.com">emeraldvistaluxurysuites@gmail.com</a>
             </div>
+            <div className="px-2 py-4">
+              <a  href="/terms" className="heading font-semibold text-xl">Terms and Conditions</a>
+            </div>
           </div>
         </div>
         <div className="map">
@@ -41,14 +44,12 @@ const Footer = () => {
       <div className="creators m-1 flex flex-col items-center lg:flex-row">
         <div className="btn flex pb-1">Designed by&nbsp; <Link className="underline" href="tel:+919623069768">Tanvi Vaze </Link></div><span className="hidden p-1 lg:inline">&nbsp;|&nbsp;</span>
         <div className="btn flex pb-1">Created by&nbsp; <Link className="underline" href="https://omshejul.com/qr/">Om Shejul</Link></div>
-        </div>
+      </div>
      </div>
     </>
   );
 };
 
 export default Footer;
-function useState(arg0: boolean): [any, any] {
-  throw new Error("Function not implemented.");
-}
+
 
