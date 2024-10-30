@@ -9,7 +9,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center ">
       <Nav />
       <ContactBtn />
-      <Heading class="pt-28">Terms & Conditions</Heading>
+      <Heading class="pt-28 mx-2">Terms & Conditions</Heading>
       <div className="grid container place-items-center">
         <Para className="text-justify">
           This document is an electronic record in terms of Information
@@ -109,7 +109,7 @@ export default function Home() {
           using through the contact information provided on this website.
         </Para>
       </div>
-      <Heading>Privacy Policy</Heading>
+      <Heading class="mx-2">Privacy Policy</Heading>
       <div className="grid container place-items-center">
         <Para className="text-justify">
           <span className="font-semibold">Introduction:</span> This Privacy
@@ -238,7 +238,7 @@ export default function Home() {
           laws.
         </Para>
       </div>
-      <Heading>Refund and Cancellation policy</Heading>
+      <Heading class="mx-2">Refund and Cancellation policy</Heading>
       <div className="grid container place-items-center">
         <Para className="text-justify ">
           This refund and cancellation policy outlines how you can cancel or
