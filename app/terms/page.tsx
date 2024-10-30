@@ -11,7 +11,7 @@ export default function Home() {
       <ContactBtn />
       <Heading class="pt-28">Terms & Conditions</Heading>
       <div className="grid container place-items-center">
-        <Para className="text-justify border rounded-md p-12 border-white border-opacity-10">
+        <Para className="text-justify">
           This document is an electronic record in terms of Information
           Technology Act, 2000 and rules there under as applicable and the
           amended provisions pertaining to electronic records in various
@@ -22,11 +22,11 @@ export default function Home() {
           Technology (Intermediaries guidelines) Rules, 2011 that require
           publishing the rules and regulations, privacy policy and Terms of Use
           for access or usage of domain name <a href="https://www.emeraldvistaindia.in/">https://www.emeraldvistaindia.in/</a>
-          ('Website'), including the related mobile site and mobile application
-          (hereinafter referred to as 'Platform'). The Platform is owned by
+          (&apos;Website&apos;), including the related mobile site and mobile application
+          (hereinafter referred to as &apos;Platform&apos;). The Platform is owned by
           EMERALD VISTA, which is located at <b>52/5/3, LANE NO.4, BEHIND AUDI
           SHWOROOM, NEAR SAI ASHIRWAD, BANER, PUNE</b> (hereinafter referred to as
-          ‘Platform Owner’, 'we', 'us', 'our'). Your use of the Platform and
+          &apos;Platform Owner&apos;, &apos;we&apos;, &apos;us&apos;, &apos;our&apos;). Your use of the Platform and
           services and tools are governed by the following terms and conditions
           (“Terms of Use”) as applicable to the Platform including the
           applicable policies which are incorporated herein by way of reference.
@@ -36,14 +36,14 @@ export default function Home() {
           these terms and conditions including the policies constitute Your
           binding obligations, with Platform Owner. These Terms of Use relate to
           your use of our website, goods (as applicable) or services (as
-          applicable) (collectively, 'Services'). Any terms and conditions
+          applicable) (collectively, &apos;Services&apos;). Any terms and conditions
           proposed by You which are in addition to or which conflict with these
           Terms of Use are expressly rejected by the Platform Owner and shall be
           of no force or effect. These Terms of Use can be modified at any time
           without assigning any reason. It is your responsibility to
           periodically review these Terms of Use to stay informed of updates.
           For the purpose of these Terms of Use, wherever the context so
-          requires ‘you’, 'your' or ‘user’ shall mean any natural or legal
+          requires &apos;you&apos;, &apos;your&apos; or &apos;user&apos; shall mean any natural or legal
           person who has agreed to become a user/buyer on the Platform.
           ACCESSING, BROWSING OR OTHERWISE USING THE PLATFORM INDICATES YOUR
           AGREEMENT TO ALL THE TERMS AND CONDITIONS UNDER THESE TERMS OF USE, SO
@@ -82,7 +82,7 @@ export default function Home() {
           Owner for the Services. You shall indemnify and hold harmless Platform
           Owner, its affiliates, group companies (as applicable) and their
           respective officers, directors, agents, and employees, from any claim
-          or demand, or actions including reasonable attorney's fees, made by
+          or demand, or actions including reasonable attorney&apos;s fees, made by
           any third party or penalty imposed due to or arising out of Your
           breach of this Terms of Use, privacy Policy and other Policies, or
           Your violation of any law, rules or regulations or the rights
@@ -101,10 +101,10 @@ export default function Home() {
       </div>
       <Heading>Privacy Policy</Heading>
       <div className="grid container place-items-center">
-        <Para className="text-justify border rounded-md p-12 border-white border-opacity-10">
+        <Para className="text-justify">
           <span className="font-semibold">Introduction:</span> This Privacy
           Policy describes how <b>EMERALD VISTA</b> and its affiliates (collectively
-            <b> "EMERALD VISTA, we, our, us")</b> collect, use, share, protect or
+            <b> &quot;EMERALD VISTA, we, our, us&quot;)</b> collect, use, share, protect or
           otherwise process your information/personal data through our website
           <a href="https://www.emeraldvistaindia.in/">https://www.emeraldvistaindia.in/</a> (hereinafter referred to as
             <b>Platform</b>). Please note that you may be able to browse certain sections
@@ -136,7 +136,7 @@ export default function Home() {
           and such third-party business partner platforms. When such a
           third-party business partner collects your personal data directly from
           you, you will be governed by their privacy policies. We shall not be
-          responsible for the third-party business partner’s privacy practices
+          responsible for the third-party business partner&apos;s privacy practices
           or the content of their privacy policies, and we request you to read
           their privacy policies prior to disclosing any information. If you
           receive an email, a call from a person/association claiming to be
@@ -214,8 +214,7 @@ export default function Home() {
           <br />
           <br /> <span className="font-semibold">
             Changes to this Privacy Policy:
-          </span>{" "}
-          Please check our Privacy Policy periodically for changes. We may
+          </span> Please check our Privacy Policy periodically for changes. We may
           update this Privacy Policy to reflect changes to our information
           practices. We may alert / notify you about the significant changes to
           the Privacy Policy, in the manner as may be required under applicable
@@ -224,7 +223,7 @@ export default function Home() {
       </div>
       <Heading>Refund and Cancellation policy</Heading>
       <div className="grid container place-items-center">
-        <Para className="text-justify border rounded-md p-12 border-white border-opacity-10 ">
+        <Para className="text-justify ">
           This refund and cancellation policy outlines how you can cancel or
           seek a refund for a service that you have purchased through the
           Platform. Under this policy: Cancellations will only be considered if
