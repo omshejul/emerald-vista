@@ -30,7 +30,7 @@ const Footer = () => {
               <a className="content" href="mailto:emeraldvistaluxurysuites@gmail.com">emeraldvistaluxurysuites@gmail.com</a>
             </div>
             <div className="px-2 py-4">
-              <a  href="/terms" className="heading font-semibold text-xl">Terms and Conditions</a>
+              <a  href="/terms-and-conditions" className="heading font-semibold text-xl">Terms and Conditions</a>
             </div>
           </div>
         </div>
