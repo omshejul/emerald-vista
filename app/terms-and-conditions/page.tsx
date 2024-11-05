@@ -255,6 +255,12 @@ export default function Home() {
           </b>
         </Para>
       </div>
+      <Heading class="mx-2">Pricing</Heading>
+      <div className="grid container place-items-center">
+        <Para className="text-justify">
+          Our apartment tariff starts from ₹2,000 up to ₹5,000. Please note that government taxes are extra and will be added to the final bill.
+        </Para>
+      </div>
       <Footer />
     </main>
   );
