@@ -258,7 +258,7 @@ export default function Home() {
       <Heading class="mx-2">Pricing</Heading>
       <div className="grid container place-items-center">
         <Para className="text-justify">
-          Our apartment tariff starts from ₹2,000 up to ₹5,000. Please note that government taxes are extra and will be added to the final bill.
+          Our apartment tariff starts from ₹2,000 up to ₹5,000. Please note that government taxes are extra and will be added to the final bill. In case of refund, it shall be processed within 3 to 4 working days.
         </Para>
       </div>
       <Footer />
