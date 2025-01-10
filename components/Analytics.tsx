@@ -10,7 +10,8 @@ export default function Analytics() {
 
   useEffect(() => {
     if (pathname) {
-      pageview(pathname);
+      const url = searchParams ? `${pathname}?${searchParams}` : pathname;
+      pageview(url);
     }
   }, [pathname, searchParams]);
 
