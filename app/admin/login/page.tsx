@@ -1,18 +1,26 @@
 "use client";
 
 import { signIn, useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function LoginPage() {
   const { data: session, status } = useSession();
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   useEffect(() => {
+    // Check for error in URL parameters
+    const error = searchParams.get("error");
+    if (error === "AccessDenied") {
+      setErrorMessage("Access denied. Only authorized administrators can login.");
+    }
+
     if (status === "authenticated" && session?.user?.role === "admin") {
       router.push("/admin");
     }
-  }, [session, status, router]);
+  }, [session, status, router, searchParams]);
 
   const handleGoogleLogin = async () => {
     await signIn("google", { callbackUrl: "/admin" });
@@ -20,7 +28,7 @@ export default function LoginPage() {
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-bg">
-      <div className="w-full max-w-md p-8 space-y-8 bg-bg border border-accent/20 rounded-xl">
+      <div className="max-w-md p-8 m-2 space-y-8 bg-bg border border-accent/20 rounded-xl">
         <div className="text-center">
           <div className="flex justify-center">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,6 +44,13 @@ export default function LoginPage() {
             Sign in to access the admin dashboard
           </p>
         </div>
+        
+        {errorMessage && (
+          <div className="p-3 uppercase text-center bg-red-500/20 border border-red-500/50 rounded-md text-red-200 text-sm">
+            {errorMessage}
+          </div>
+        )}
+        
         <div className="space-y-6">
           <button
             onClick={handleGoogleLogin}
