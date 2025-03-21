@@ -44,7 +44,7 @@ export default async function PageDetail({ params }: PageProps) {
   const hasImage = page.image?.data || page.imageUrl;
 
   return (
-    <main className="min-h-screen w-screen overflow-hidden bg-black flex items-center justify-center">
+    <>
       {hasImage ? (
         page.imageUrl ? (
           <div className="relative w-full h-screen">
@@ -58,19 +58,19 @@ export default async function PageDetail({ params }: PageProps) {
             />
           </div>
         ) : (
-          <div className="relative w-full h-screen">
+          <>
             <img 
               src={`/api/image/${page._id}`}
               alt={page.name}
-              className="w-full h-full object-contain"
+              className="w-full"
             />
-          </div>
+          </>
         )
       ) : (
         <div className="text-white text-center p-4">
           No image available
         </div>
       )}
-    </main>
+    </>
   );
 } 
