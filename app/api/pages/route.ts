@@ -1,19 +1,66 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth/next';
+import { Types } from 'mongoose';
 import connectToDatabase from '@/app/lib/mongodb';
 import Page from '@/app/models/Page';
 import { authOptions } from '@/app/lib/auth';
+
+interface MongoPage {
+  _id: Types.ObjectId;
+  name: string;
+  slug: string;
+  imageUrl?: string;
+  image?: {
+    data: Buffer;
+    contentType: string;
+    filename: string;
+  };
+}
 
 // GET all pages
 export async function GET(req: NextRequest) {
   try {
     await connectToDatabase();
-    const pages = await Page.find({}).sort({ createdAt: -1 });
-    return NextResponse.json({ success: true, data: pages });
-  } catch (error) {
+    
+    // Fetch pages and convert to plain objects
+    const rawData = await Page.find({}).sort({ name: 1 }).lean();
+    
+    // Type assertion after validating the shape of the data
+    const pagesData = rawData.map(doc => {
+      if (!doc._id || !doc.name || !doc.slug) {
+        throw new Error('Invalid document structure');
+      }
+      return {
+        _id: doc._id as Types.ObjectId,
+        name: doc.name as string,
+        slug: doc.slug as string,
+        imageUrl: doc.imageUrl as string | undefined,
+        image: doc.image as MongoPage['image'] | undefined
+      };
+    });
+    
+    // Serialize the data properly
+    const pages = pagesData.map(page => ({
+      _id: page._id.toString(),
+      name: page.name || '',
+      slug: page.slug || '',
+      imageUrl: page.imageUrl || undefined,
+      image: page.image ? {
+        data: page.image.data ? true : undefined,
+      } : undefined
+    }));
+
+    return NextResponse.json({ 
+      success: true, 
+      data: pages 
+    });
+  } catch (error: any) {
     console.error('Error fetching pages:', error);
     return NextResponse.json(
-      { success: false, error: 'Failed to fetch pages' },
+      { 
+        success: false, 
+        error: error.message || 'Failed to fetch pages' 
+      },
       { status: 500 }
     );
   }
@@ -66,7 +113,7 @@ export async function POST(req: NextRequest) {
       const buffer = Buffer.from(await file.arrayBuffer());
       
       // Create a new page with image data
-      const newPage = await Page.create({
+      const doc = await Page.create({
         name,
         slug,
         image: {
@@ -75,9 +122,29 @@ export async function POST(req: NextRequest) {
           filename: file.name
         }
       });
+
+      // Type assertion after validating the shape of the data
+      const newPage = {
+        _id: doc._id as Types.ObjectId,
+        name: doc.name as string,
+        slug: doc.slug as string,
+        imageUrl: doc.imageUrl as string | undefined,
+        image: doc.image as MongoPage['image'] | undefined
+      };
       
+      // Serialize the response
+      const serializedPage = {
+        _id: newPage._id.toString(),
+        name: newPage.name || '',
+        slug: newPage.slug || '',
+        imageUrl: newPage.imageUrl || undefined,
+        image: newPage.image ? {
+          data: newPage.image.data ? true : undefined,
+        } : undefined
+      };
+
       return NextResponse.json(
-        { success: true, data: newPage },
+        { success: true, data: serializedPage },
         { status: 201 }
       );
     } else {
@@ -108,21 +175,44 @@ export async function POST(req: NextRequest) {
       }
       
       // Create a new page
-      const newPage = await Page.create({
+      const doc = await Page.create({
         name,
         slug,
         imageUrl,
       });
+
+      // Type assertion after validating the shape of the data
+      const newPage = {
+        _id: doc._id as Types.ObjectId,
+        name: doc.name as string,
+        slug: doc.slug as string,
+        imageUrl: doc.imageUrl as string | undefined,
+        image: doc.image as MongoPage['image'] | undefined
+      };
       
+      // Serialize the response
+      const serializedPage = {
+        _id: newPage._id.toString(),
+        name: newPage.name || '',
+        slug: newPage.slug || '',
+        imageUrl: newPage.imageUrl || undefined,
+        image: newPage.image ? {
+          data: newPage.image.data ? true : undefined,
+        } : undefined
+      };
+
       return NextResponse.json(
-        { success: true, data: newPage },
+        { success: true, data: serializedPage },
         { status: 201 }
       );
     }
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error creating page:', error);
     return NextResponse.json(
-      { success: false, error: 'Failed to create page' },
+      { 
+        success: false, 
+        error: error.message || 'Failed to create page' 
+      },
       { status: 500 }
     );
   }
