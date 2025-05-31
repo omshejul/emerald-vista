@@ -48,9 +48,9 @@ const Links = ({ className }: { className: string }) => {
       <Link href="/our-services" className={className}>
         Our Services
       </Link>
-      <Link href="/our-journey" className={className}>
+      {/* <Link href="/our-journey" className={className}>
         Our Journey
-      </Link>
+      </Link> */}
       <Link href="/gallery" className={className}>
         Photo Gallery
       </Link>
